@@ -1,4 +1,4 @@
-# Install script for directory: /home/ubuntu/orb_slam2_code/RGBD_SLAM/part2
+# Install script for directory: /home/ubuntu/RGBD_SLAM_code/part2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ubuntu/orb_slam2_code/RGBD_SLAM/part2/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ubuntu/RGBD_SLAM_code/part2/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ubuntu/orb_slam2_code/RGBD_SLAM/part2/src/generate_pointCloud.cpp" "CMakeFiles/generate_pointCloud.dir/src/generate_pointCloud.cpp.o" "gcc" "CMakeFiles/generate_pointCloud.dir/src/generate_pointCloud.cpp.o.d"
+  "/home/ubuntu/RGBD_SLAM_code/part2/src/generate_pointCloud.cpp" "CMakeFiles/generate_pointCloud.dir/src/generate_pointCloud.cpp.o" "gcc" "CMakeFiles/generate_pointCloud.dir/src/generate_pointCloud.cpp.o.d"
   )
 
 # Targets to which this target links.

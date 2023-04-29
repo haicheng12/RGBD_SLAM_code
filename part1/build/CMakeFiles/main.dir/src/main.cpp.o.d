@@ -1,5 +1,5 @@
 CMakeFiles/main.dir/src/main.cpp.o: \
- /home/ubuntu/orb_slam2_code/RGBD_SLAM/part1/src/main.cpp \
+ /home/ubuntu/RGBD_SLAM_code/part1/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/7/iostream \
  /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
