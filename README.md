@@ -9,6 +9,7 @@
 学习记录：
 ————2023年4月29号
 1、建立仓库，测试一些简单的代码
+2、跑通视觉里程计
 ```
 
 **系统环境**
@@ -22,8 +23,6 @@ pcl-1.8
 
 **启动步骤**
 
-
-
 **主要参考**
 
 ```
@@ -31,7 +30,7 @@ RGBD SLAM：
 https://www.cnblogs.com/gaoxiang12/p/4633316.html
 
 pcl1.8安装:
-https://blog.csdn.net/handily_1/article/details/122181399 
+https://blog.csdn.net/handily_1/article/details/122181399
 
 pcl编译BUG：
 https://github.com/PointCloudLibrary/pcl/pull/2786/commits/3eeca19fda82a6d393f3c6bd09d2331ad60ee53c

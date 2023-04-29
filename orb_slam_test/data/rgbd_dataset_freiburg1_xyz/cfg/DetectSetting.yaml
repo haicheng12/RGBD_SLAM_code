@@ -1,0 +1,26 @@
+%YAML:1.0
+
+#轮廓检测的阈值
+m_BinaryThreshold: 80
+
+#轮廓检测的数量和面积大小判断
+m_MaxArea: 2000
+m_MinArea: 30
+
+################BlobDetector相关参数设置########################
+minThreshold: 80
+maxThreshold: 255
+thresholdStep: 10
+
+filterByArea: 1
+BlobMinArea: 200
+BlobMaxArea: 800
+
+filterByCircularity: 1
+minCircularity: 0.3
+
+filterByConvexity: 1
+minConvexity: 0.3
+
+filterByInertia: 1
+minInertiaRatio: 0.3
