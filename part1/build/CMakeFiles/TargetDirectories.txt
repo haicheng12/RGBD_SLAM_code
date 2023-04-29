@@ -1,0 +1,3 @@
+/home/ubuntu/orb_slam2_code/RGBD_SLAM/part1/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/orb_slam2_code/RGBD_SLAM/part1/build/CMakeFiles/main.dir
+/home/ubuntu/orb_slam2_code/RGBD_SLAM/part1/build/CMakeFiles/edit_cache.dir

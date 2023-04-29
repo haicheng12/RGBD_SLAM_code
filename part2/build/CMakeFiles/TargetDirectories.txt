@@ -1,0 +1,3 @@
+/home/ubuntu/orb_slam2_code/RGBD_SLAM/part2/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/orb_slam2_code/RGBD_SLAM/part2/build/CMakeFiles/generate_pointCloud.dir
+/home/ubuntu/orb_slam2_code/RGBD_SLAM/part2/build/CMakeFiles/edit_cache.dir
