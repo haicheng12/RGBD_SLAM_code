@@ -19,10 +19,10 @@ using namespace std;
 int main(int argc, char **argv)
 {
     // 声明并从data文件夹里读取两个rgb与深度图
-    cv::Mat rgb1 = cv::imread("../data/rgb1.png");
-    cv::Mat rgb2 = cv::imread("../data/rgb2.png");
-    cv::Mat depth1 = cv::imread("../data/depth1.png", -1);
-    cv::Mat depth2 = cv::imread("../data/depth2.png", -1);
+    cv::Mat rgb1 = cv::imread("/home/ubuntu/RGBD_SLAM_code/part3/data/rgb1.png");
+    cv::Mat rgb2 = cv::imread("/home/ubuntu/RGBD_SLAM_code/part3/data/rgb2.png");
+    cv::Mat depth1 = cv::imread("/home/ubuntu/RGBD_SLAM_code/part3/data/depth1.png", -1);
+    cv::Mat depth2 = cv::imread("/home/ubuntu/RGBD_SLAM_code/part3/data/depth2.png", -1);
 
     // 声明特征提取器与描述子提取器
     cv::Ptr<cv::FeatureDetector> detector = cv::ORB::create();
@@ -38,7 +38,7 @@ int main(int argc, char **argv)
     cv::Mat imgShow;
     cv::drawKeypoints(rgb1, kp1, imgShow, cv::Scalar::all(-1), cv::DrawMatchesFlags::DRAW_RICH_KEYPOINTS);
     cv::imshow("keypoints", imgShow);
-    cv::imwrite("../data/keypoints.png", imgShow);
+    cv::imwrite("/home/ubuntu/RGBD_SLAM_code/data/keypoints.png", imgShow);
     cv::waitKey(0); // 暂停等待一个按键
 
     // 计算描述子
@@ -56,7 +56,7 @@ int main(int argc, char **argv)
     cv::Mat imgMatches;
     cv::drawMatches(rgb1, kp1, rgb2, kp2, matches, imgMatches);
     cv::imshow("matches", imgMatches);
-    cv::imwrite("../data/matches.png", imgMatches);
+    cv::imwrite("/home/ubuntu/RGBD_SLAM_code/part3/data/matches.png", imgMatches);
     cv::waitKey(0);
 
     // 筛选匹配，把距离太大的去掉
@@ -80,7 +80,7 @@ int main(int argc, char **argv)
     cout << "good matches=" << goodMatches.size() << endl;
     cv::drawMatches(rgb1, kp1, rgb2, kp2, goodMatches, imgMatches);
     cv::imshow("good matches", imgMatches);
-    cv::imwrite("../data/good_matches.png", imgMatches);
+    cv::imwrite("/home/ubuntu/RGBD_SLAM_code/part3/data/good_matches.png", imgMatches);
     cv::waitKey(0);
 
     // 计算图像间的运动关系
@@ -125,7 +125,7 @@ int main(int argc, char **argv)
     cv::Mat cameraMatrix(3, 3, CV_64F, camera_matrix_data);
     cv::Mat rvec, tvec, inliers;
     // 求解pnp
-    cv::solvePnPRansac(pts_obj, pts_img, cameraMatrix, cv::Mat(), rvec, tvec, false, 100, 1.0, 100, inliers);
+    cv::solvePnPRansac(pts_obj, pts_img, cameraMatrix, cv::Mat(), rvec, tvec, false, 100, 1.0, 0.99, inliers);
 
     cout << "inliers: " << inliers.rows << endl;
     cout << "R=" << rvec << endl;
@@ -139,7 +139,7 @@ int main(int argc, char **argv)
     }
     cv::drawMatches(rgb1, kp1, rgb2, kp2, matchesShow, imgMatches);
     cv::imshow("inlier matches", imgMatches);
-    cv::imwrite("../data/inliers.png", imgMatches);
+    cv::imwrite("/home/ubuntu/RGBD_SLAM_code/part3/data/inliers.png", imgMatches);
     cv::waitKey(0);
 
     return 0;

@@ -51,5 +51,6 @@ cv::Point3f point2dTo3d(cv::Point3f &point, CAMERA_INTRINSIC_PARAMETERS &camera)
     p.z = double(point.z) / camera.scale;
     p.x = (point.x - camera.cx) * p.z / camera.fx;
     p.y = (point.y - camera.cy) * p.z / camera.fy;
+
     return p;
 }

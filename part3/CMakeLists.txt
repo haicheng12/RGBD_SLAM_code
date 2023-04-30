@@ -14,5 +14,5 @@ include_directories(${PCL_INCLUDE_DIRS})
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
 add_executable(detect_features src/slam_base.cpp
-                               src/detect_features.cpp)
+  src/detect_features.cpp)
 target_link_libraries(detect_features ${PCL_LIBRARIES} ${OpenCV_LIBS})

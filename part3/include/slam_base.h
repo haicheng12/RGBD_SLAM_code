@@ -12,8 +12,6 @@
 #include <fstream>
 #include <vector>
 
-using namespace std;
-
 // OpenCV
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -21,6 +19,8 @@ using namespace std;
 // PCL
 #include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>
+
+using namespace std;
 
 // 类型定义
 typedef pcl::PointXYZRGBA PointT;
