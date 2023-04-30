@@ -44,15 +44,10 @@ void LoadImages(const std::string &strFile, std::vector<std::string> &vstrImageF
 
 int main()
 {
-	// std::string Imagepath = "/home/ubuntu/bag_data/rgbd_dataset_freiburg2_desk";
-	// std::string strImFile = Imagepath + "/home/ubuntu/bag_data/rgbd_dataset_freiburg2_desk/rgb.txt";
-	// std::string strDepthFile = Imagepath + "/home/ubuntu/bag_data/rgbd_dataset_freiburg2_desk/depth.txt";
-	// std::string strSettingPath = "/home/ubuntu/bag_data/cfg/TUM2.yaml";
 	std::string Imagepath = "/home/ubuntu/bag_data/rgbd_dataset_freiburg1_desk";
 	std::string strImFile = "/home/ubuntu/bag_data/rgbd_dataset_freiburg1_desk/rgb.txt";
 	std::string strDepthFile = "/home/ubuntu/bag_data/rgbd_dataset_freiburg1_desk/depth.txt";
 	std::string strSettingPath = "/home/ubuntu/bag_data/cfg/TUM2.yaml";
-
 	std::vector<std::string> vstrImageFilenames, vstrDImageFilenames;
 	std::vector<double> vTimestamps, vDTimestamps;
 

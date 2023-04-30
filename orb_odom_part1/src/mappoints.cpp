@@ -8,6 +8,7 @@ namespace myslam
 	MapPoints *MapPoints::creatMappoints()
 	{
 		static long factory_id = 0;
+
 		return (new MapPoints(factory_id, cv::Point3d(0.0, 0.0, 0.0), cv::Point3d(0.0, 0.0, 0.0)));
 	}
 }

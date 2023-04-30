@@ -13,6 +13,9 @@
 ————2023年4月29号
 1、建立仓库，测试一些简单的代码
 2、跑通视觉里程计
+
+————2023年4月30号
+1、更新视觉里程计
 ```
 
 **系统环境**
@@ -53,7 +56,3 @@ https://blog.csdn.net/qq_36371087/article/details/115918334
 数据集：
 https://cvg.cit.tum.de/data/datasets/rgbd-dataset/download
 ```
-
-
-
-

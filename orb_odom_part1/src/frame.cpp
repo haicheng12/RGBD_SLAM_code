@@ -27,12 +27,14 @@ namespace myslam
 					return d / camera_->depth_scale_;
 			}
 		}
+
 		return -1.0;
 	}
 
 	cv::Mat Frame::getCamCenter() const
 	{
 		cv::Mat T_w_c = T_c_w_.inv(cv::DecompTypes::DECOMP_SVD);
+
 		return T_w_c(cv::Rect(3, 0, 1, 3));
 	}
 
@@ -41,7 +43,9 @@ namespace myslam
 		cv::Point3d p_cam = camera_->world2camera(pt_world, T_c_w_);
 		if (p_cam.z < 0)
 			return false;
+
 		cv::Point2d pixel = camera_->camera2pixel(p_cam);
+
 		return (pixel.x > 0 && pixel.y > 0 && pixel.x < color_.cols && pixel.y < color_.rows);
 	}
 }

@@ -21,6 +21,7 @@ namespace myslam
 		pts4_w.at<double>(3, 0) = 1.0;
 
 		cv::Mat pts_convert = T_c_w * pts4_w;
+
 		return cv::Point3d(pts_convert(cv::Rect(0, 0, 1, 3)));
 	}
 
@@ -32,12 +33,14 @@ namespace myslam
 		pts4_c.at<double>(3, 0) = 1.0;
 
 		cv::Mat pts_convert = T_w_c * pts4_c;
+
 		return cv::Point3d(pts_convert(cv::Rect(0, 0, 1, 3)));
 	}
 
 	cv::Point2d Camera::camera2pixel(cv::Point3d p_c)
 	{
 		cv::Mat pts3_c(p_c);
+
 		return cv::Point2d(
 			fx_ * pts3_c.at<double>(0, 0) / pts3_c.at<double>(2, 0) + cx_,
 			fy_ * pts3_c.at<double>(1, 0) / pts3_c.at<double>(2, 0) + cy_);
